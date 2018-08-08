@@ -1,0 +1,144 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1.5fr 1.5fr 0.5fr;
+  grid-gap: 1px;
+  grid-template-areas: ". . en_tete en_tete" ". centre centre ." ". centre centre ." "footer footer footer footer";
+}
+
+body a {
+  text-decoration: none;
+  color: #666;
+}
+
+body a:hover {
+  text-decoration: underline;
+}
+
+#en_tete {
+  grid-area: en_tete;
+  display: flex;
+  justify-content:flex-end;
+  word-spacing: 15px;
+  margin-right: 30px;
+  font-size: 13px;
+  font-family: Arial;
+  color: #757575;
+}
+
+#en_tete ul li {
+  display: inline;
+}
+
+#centre {
+  grid-area: centre;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+#searchbar {
+  padding: 25px 0px;
+}
+
+#searchbar input {
+  width: 480px;
+  height: 35px;
+  box-shadow: 0px 3px 5px 1px LightGrey;
+}
+
+#bouton button {
+  width: 144px;
+  height: 36px;
+  margin: 7px 2px;
+  background-color: #f2f2f2;
+  color: #757575;
+  font-weight: bold;
+  font-size: 13px;
+  border: none;
+}
+
+#bouton button:hover{
+  color: black;
+  border-style: solid;
+  border-width: 1px;
+  border-color: LightGrey;
+}
+
+#langues {
+  margin: 25px;
+  font-family: Arial;
+  font-size: small;
+}
+
+#langues a{
+  color: #1a0dab;
+}
+
+
+footer ul li{
+  display: inline;
+  padding-right: 30px;
+}
+
+#france {
+  border-top: solid;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: LightGrey;
+  color: rgba(0,0,0,.54);
+  font-size: 15px;
+  font-family: Arial;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+footer div {
+  font-size: small;
+}
+
+#gauche {
+  float: left;
+  text-align: left;
+  font-size: 13px;
+  height: 32px;
+}
+
+#droite {
+  text-align: right;
+  float: right;
+  font-size: 13px;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #f2f2f2;
+  font-family: Arial;
+}
